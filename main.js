@@ -122,7 +122,6 @@ var Display = /** @class */ (function () {
                 var id = this.selectedNode.id;
                 this.nodes[id].remove();
                 delete this.nodes[id];
-                console.log(this.nodes);
                 for (var i = id + 1; i < this.nodes.length; i++) {
                     this.nodes[i].id -= 1;
                 }
@@ -176,7 +175,6 @@ var edge = /** @class */ (function () {
         var startPos = this.start.translate;
         var endPos = this.end.translate;
         this.SVGline.setAttribute("points", "" + startPos[0] + "," + startPos[1] + " " + endPos[0] + "," + endPos[1]);
-        console.log("points", "" + startPos[0] + "," + startPos[1] + " " + endPos[0] + "," + endPos[1]);
     };
     return edge;
 }());
@@ -224,15 +222,11 @@ var node = /** @class */ (function () {
     });
     node.prototype.addEdge = function (e) {
         this.edgesList.push(e);
-        console.log(this.edgesList);
     };
     node.prototype.updateEdges = function () {
-        console.log("edges updated1");
         this.edgesList.forEach(function (edge) {
-            console.log("updating edge");
             edge.updateEdge();
         });
-        console.log("edges updated2");
         return null;
     };
     node.r = 20;
