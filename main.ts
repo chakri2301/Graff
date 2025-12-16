@@ -158,6 +158,7 @@ class toolBox {
     public addNode: string | null = null;
     public deleteNode: string | null = null;
     public guide: string | null = null;
+    public addEdge: string | null = null;
 }
 class edge {
     private SVGline: SVGPolylineElement;
@@ -229,4 +230,5 @@ var toolbox = new toolBox();
 toolbox.addNode = "addnode";
 toolbox.deleteNode = "delnode";
 toolbox.guide = "guide";
+toolbox.addEdge = "addedge";
 var displayObject = new Display(dis!, toolbox);

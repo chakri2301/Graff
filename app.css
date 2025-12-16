@@ -20,9 +20,7 @@ button {
     font-size: 3rem;
 }
 
-g:hover circle {
-    stroke: white;
-}
+
 
 text {
     fill: white;
