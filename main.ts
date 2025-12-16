@@ -47,6 +47,7 @@ class Display {
     private toolbox: toolBox;
     private edgeGroup: SVGGElement;
     private guideText: HTMLSpanElement | null = null;
+    private addEdgeButton: HTMLButtonElement | null = null;
     private draggingNode: node | null = null;
     private selectedNode: node | null = null;
     private nodes: node[] = [];
@@ -78,7 +79,7 @@ class Display {
             this.guideText = document.getElementById(toolbox.guide) as HTMLSpanElement;
         }
         if (toolbox.addEdge != null) {
-            this.guideText = document.getElementById(toolbox.addEdge) as HTMLSpanElement;
+            this.addEdgeButton = document.getElementById(toolbox.addEdge) as HTMLButtonElement;
             document.getElementById(toolbox.addEdge)!.onclick = () => {
                 this.addEdge();
             }

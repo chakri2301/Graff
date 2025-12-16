@@ -45,6 +45,7 @@ var Display = /** @class */ (function () {
     function Display(SVGelement, toolbox) {
         var _this = this;
         this.guideText = null;
+        this.addEdgeButton = null;
         this.draggingNode = null;
         this.selectedNode = null;
         this.nodes = [];
@@ -81,7 +82,7 @@ var Display = /** @class */ (function () {
             this.guideText = document.getElementById(toolbox.guide);
         }
         if (toolbox.addEdge != null) {
-            this.guideText = document.getElementById(toolbox.addEdge);
+            this.addEdgeButton = document.getElementById(toolbox.addEdge);
             document.getElementById(toolbox.addEdge).onclick = function () {
                 _this.addEdge();
             };
