@@ -80,6 +80,12 @@ var Display = /** @class */ (function () {
         if (toolbox.guide != null) {
             this.guideText = document.getElementById(toolbox.guide);
         }
+        if (toolbox.addEdge != null) {
+            this.guideText = document.getElementById(toolbox.addEdge);
+            document.getElementById(toolbox.addEdge).onclick = function () {
+                _this.addEdge();
+            };
+        }
         //toolbox end------
         this.edgeGroup = document.createElementNS(xmlns, "g");
         this.SVGelement.appendChild(this.edgeGroup);
@@ -161,6 +167,7 @@ var toolBox = /** @class */ (function () {
         this.addNode = null;
         this.deleteNode = null;
         this.guide = null;
+        this.addEdge = null;
     }
     return toolBox;
 }());
@@ -240,4 +247,5 @@ var toolbox = new toolBox();
 toolbox.addNode = "addnode";
 toolbox.deleteNode = "delnode";
 toolbox.guide = "guide";
+toolbox.addEdge = "addedge";
 var displayObject = new Display(dis, toolbox);

@@ -73,8 +73,15 @@ class Display {
             document.getElementById(toolbox.deleteNode)!.onclick = () => {
                 this.deleteNode();
             }
-        } if (toolbox.guide != null) {
+        }
+        if (toolbox.guide != null) {
             this.guideText = document.getElementById(toolbox.guide) as HTMLSpanElement;
+        }
+        if (toolbox.addEdge != null) {
+            this.guideText = document.getElementById(toolbox.addEdge) as HTMLSpanElement;
+            document.getElementById(toolbox.addEdge)!.onclick = () => {
+                this.addEdge();
+            }
         }
         //toolbox end------
         this.edgeGroup = document.createElementNS(xmlns, "g") as SVGGElement;
